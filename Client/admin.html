@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/admin.js"></script>
+  <title>Admin portal</title>
+</head>
+<body>
+    <header class="hero has-background-grey">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Admin portal</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h2 class="title is-4">Add New Product</h2>
+                <form id="add-product-form" onsubmit="addProduct(event)">
+                    <div class="field">
+                        <label class="label">Product Name</label>
+                        <div class="control">
+                            <input class="input" type="text" id="name" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Description</label>
+                        <div class="control">
+                            <textarea class="textarea" id="description" required></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Price</label>
+                        <div class="control">
+                            <input class="input" type="number" id="price" step="0.01" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="checkbox">
+                        <input type="checkbox" id="availability"> Available
+                        </label>
+                    </div>
+                    <div class="field">
+                        <label class="label">Image URL</label>
+                        <div class="control">
+                            <input class="input" type="url" id="image" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                        <button class="button is-primary">Add Product</button>
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </main>
+</body>
+</html>
